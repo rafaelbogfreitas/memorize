@@ -9,10 +9,48 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        return ZStack(content: {
+            RoundedRectangle(cornerRadius: 10.0)
+                .fill()
+            RoundedRectangle(cornerRadius: 10.0)
+                .stroke()
+            Text("👻")
+        })
+        .padding()
+        .foregroundColor(.orange)
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
