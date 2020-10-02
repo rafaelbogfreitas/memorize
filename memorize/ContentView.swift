@@ -18,7 +18,7 @@ struct ContentView: View {
     var body: some View {
         HStack {
             ForEach(0..<emojis.count) {index in
-               CardView(emoji: emojis[index])
+                CardView(isFaceUp: true, emoji: emojis[index])
             }
         }
             .padding()
@@ -28,17 +28,25 @@ struct ContentView: View {
 }
 
 struct CardView: View {
-    
+        
+    var isFaceUp: Bool
+   
     var emoji: String
     
     var body: some View {
         ZStack {
-            RoundedRectangle(cornerRadius: 10.0)
-                .fill(Color.white)
-            RoundedRectangle(cornerRadius: 10.0)
-                .stroke(lineWidth: 3)
-            Text(emoji)
+            if isFaceUp {
+                RoundedRectangle(cornerRadius: 10.0)
+                    .fill(Color.white)
+                RoundedRectangle(cornerRadius: 10.0)
+                    .stroke(lineWidth: 3)
+                Text(emoji)
+            } else {
+                
+                RoundedRectangle(cornerRadius: 10.0).fill()
+            }
         }
+        
     }
 }
 
