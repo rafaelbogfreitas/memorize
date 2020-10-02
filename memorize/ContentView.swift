@@ -7,21 +7,40 @@
 
 import SwiftUI
 
+let emojis = [
+    "👻",
+    "😋",
+    "😚",
+    "😇",
+]
+
 struct ContentView: View {
     var body: some View {
-        return ZStack(content: {
-            RoundedRectangle(cornerRadius: 10.0)
-                .fill()
-            RoundedRectangle(cornerRadius: 10.0)
-                .stroke()
-            Text("👻")
-        })
-        .padding()
-        .foregroundColor(.orange)
+        HStack {
+            ForEach(0..<emojis.count) {index in
+               CardView(emoji: emojis[index])
+            }
+        }
+            .padding()
+            .foregroundColor(.orange)
+            .font(.largeTitle)
     }
 }
 
-
+struct CardView: View {
+    
+    var emoji: String
+    
+    var body: some View {
+        ZStack {
+            RoundedRectangle(cornerRadius: 10.0)
+                .fill(Color.white)
+            RoundedRectangle(cornerRadius: 10.0)
+                .stroke(lineWidth: 3)
+            Text(emoji)
+        }
+    }
+}
 
 
 
