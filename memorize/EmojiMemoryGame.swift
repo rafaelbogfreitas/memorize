@@ -13,13 +13,13 @@ import SwiftUI
     The ViewModel file is essencially a "portal" between the view and the model
 */
 
-class EmojiMemoryGame {
+class EmojiMemoryGame: ObservableObject {
     //(set)
-    private var model: MemoryGame<String> = EmojiMemoryGame.createMemoryGame()
+    @Published private var model: MemoryGame<String> = EmojiMemoryGame.createMemoryGame()
         
     static func createMemoryGame() -> MemoryGame<String> {
         let emojis: Array<String> = [ "👻", "😋", "😚", "😇" ]
-        return MemoryGame<String>(numberOfPairsOfCards: 8) {
+        return MemoryGame<String>(numberOfPairsOfCards: emojis.count) {
             emojis[$0]
         }
     }
@@ -34,5 +34,11 @@ class EmojiMemoryGame {
     
     public func choose(card: MemoryGame<String>.Card){
         model.choose(card: card)
+    }
+}
+
+struct EmojiMemoryGame_Previews: PreviewProvider {
+    static var previews: some View {
+        /*@START_MENU_TOKEN@*/Text("Hello, World!")/*@END_MENU_TOKEN@*/
     }
 }
