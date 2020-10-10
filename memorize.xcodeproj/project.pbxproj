@@ -15,6 +15,7 @@
 		5229CBEB2528AE1B009E15DB /* EmojiMemoryGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5229CBEA2528AE1B009E15DB /* EmojiMemoryGame.swift */; };
 		52AE4D69252D48F60061B125 /* Grid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52AE4D68252D48F60061B125 /* Grid.swift */; };
 		52AE4D6C252EA7BC0061B125 /* GridLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52AE4D6B252EA7BB0061B125 /* GridLayout.swift */; };
+		52AE4D6F252EAFBF0061B125 /* Array+Identifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52AE4D6E252EAFBF0061B125 /* Array+Identifiable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		5229CBEA2528AE1B009E15DB /* EmojiMemoryGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiMemoryGame.swift; sourceTree = "<group>"; };
 		52AE4D68252D48F60061B125 /* Grid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Grid.swift; sourceTree = "<group>"; };
 		52AE4D6B252EA7BB0061B125 /* GridLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GridLayout.swift; sourceTree = "<group>"; };
+		52AE4D6E252EAFBF0061B125 /* Array+Identifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Identifiable.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				5229CBD725261733009E15DB /* memorizeApp.swift */,
 				5229CBD925261733009E15DB /* EmojiMemoryGameView.swift */,
 				52AE4D68252D48F60061B125 /* Grid.swift */,
+				52AE4D6E252EAFBF0061B125 /* Array+Identifiable.swift */,
 				52AE4D6B252EA7BB0061B125 /* GridLayout.swift */,
 				5229CBE725289C41009E15DB /* MemoryGame.swift */,
 				5229CBEA2528AE1B009E15DB /* EmojiMemoryGame.swift */,
@@ -155,6 +158,7 @@
 				5229CBD825261733009E15DB /* memorizeApp.swift in Sources */,
 				52AE4D6C252EA7BC0061B125 /* GridLayout.swift in Sources */,
 				52AE4D69252D48F60061B125 /* Grid.swift in Sources */,
+				52AE4D6F252EAFBF0061B125 /* Array+Identifiable.swift in Sources */,
 				5229CBEB2528AE1B009E15DB /* EmojiMemoryGame.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
