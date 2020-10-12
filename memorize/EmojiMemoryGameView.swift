@@ -35,6 +35,9 @@ struct CardView: View {
                         .fill(Color.white)
                     RoundedRectangle(cornerRadius: cornerRadius)
                         .stroke(lineWidth: edgeLineWidth)
+                    Pie()
+                        .padding(5)
+                        .opacity(0.4)
                     Text(card.content)
                 } else {
                     if !card.isMatched {
@@ -48,9 +51,10 @@ struct CardView: View {
     
     //MARK: - Drawing Constants
     
-    let cornerRadius: CGFloat = 10
-    let edgeLineWidth: CGFloat = 3
-    let fontScaleFactor: CGFloat = 0.75
+    private let cornerRadius: CGFloat = 10
+    private let edgeLineWidth: CGFloat = 3
+    private let fontScaleFactor: CGFloat = 0.7
+    
 }
 
 
@@ -84,6 +88,8 @@ struct CardView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        EmojiMemoryGameView(viewModel: EmojiMemoryGame())
+        let game = EmojiMemoryGame()
+        game.choose(card: game.cards[0])
+        return EmojiMemoryGameView(viewModel: game)
     }
 }
