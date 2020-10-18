@@ -32,6 +32,8 @@ struct MemoryGame<CardContent> where CardContent: Equatable {
             cards.append(card)
             cards.append(card2)
         }
+        
+        cards.shuffle()
     }
     
     mutating public func choose(card: Card) {
