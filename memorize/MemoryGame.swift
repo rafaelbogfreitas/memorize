@@ -62,7 +62,12 @@ struct MemoryGame<CardContent> where CardContent: Equatable {
             }
         }
         
-        var isMatched: Bool = false
+        var isMatched: Bool = false {
+            didSet {
+                stopUsingBonusTime()
+            }
+        }
+        
         var content: CardContent
         var id: Int
         
@@ -87,7 +92,7 @@ struct MemoryGame<CardContent> where CardContent: Equatable {
         }
 
         var bonusRemaining: Double {
-            (bonusTimeLimit > 0 && bonusTimeLimit > 0) ? bonusTimeRemaining / bonusTimeLimit : 0
+            (bonusTimeLimit > 0 && bonusTimeRemaining > 0) ? bonusTimeRemaining / bonusTimeLimit : 0
         }
 
         var hasEarnedBonus: Bool {
@@ -105,8 +110,8 @@ struct MemoryGame<CardContent> where CardContent: Equatable {
         }
         
         mutating private func stopUsingBonusTime() {
-            lastFaceUpDate = nil
             pastFaceUpTime = faceUpTime
+            lastFaceUpDate = nil
         }
     }
     
